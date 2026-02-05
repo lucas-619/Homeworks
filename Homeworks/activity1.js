@@ -1,18 +1,20 @@
-function checkOddEven(num) {
-  if (num % 2 === 0) {
+function checkOddEven(x) {
+  if (x % 2 === 0) {
     console.log("The number is even");
   } else {
     console.log("The number is odd");
   }
 }
 
-const checkOddEvenArrow = (num) => {
-  if (num % 2 === 0) {
+const checkOddEvenArrow = (x) => {
+  if (x % 2 === 0) {
     console.log("The number is even");
   } else {
     console.log("The number is odd");
   }
 };
 
-checkOddEven(7);        // The number is odd
-checkOddEvenArrow(10); // The number is even
+checkOddEven(7);    
+checkOddEven(8);    
+checkOddEvenArrow(10); 
+checkOddEvenArrow(11);

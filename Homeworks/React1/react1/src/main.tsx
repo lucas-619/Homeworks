@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import ManageStudents from './ManageStudents';
+import VehiculosManage from './VehiculosManage';
+import InversionistasManage from './inversionistasManage';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ManageStudents />
-
-
-
-    
+    <VehiculosManage />
+    <InversionistasManage />
   </React.StrictMode>
 )

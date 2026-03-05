@@ -1,17 +1,5 @@
-import type { estudiante } from "./Estudiante"
-
-class Node {
-
-    value: estudiante
-    next: Node | null
-
-    constructor(value: estudiante) {
-
-        this.value = value
-        this.next = null
-
-    }
-}
+import type { vehiculo } from "./Vehiculo"
+import { Node} from "./Node"
 
 class LinkedList {
 
@@ -27,7 +15,7 @@ class LinkedList {
         
     }
 
-    append(value: estudiante){
+    append(value: vehiculo){
 
         const newNode = new Node(value)
 
@@ -45,28 +33,13 @@ class LinkedList {
         this.length++
     }
 
-    peak(value: estudiante, current = this.head) {
-
-        while (current !== null) {
-
-           if (current.value.nombre === value.nombre && current.value.edad === value.edad && current.value.codigo === value.codigo) {
-                return current
-           }
-
-           current = current.next
-
-        }
-
-        return null
-    }
-
-    remove(value: estudiante) {
+    remove(value: vehiculo) {
 
         if (!this.head) return
 
-        if (this.head.value.nombre === value.nombre && 
-            this.head.value.edad === value.edad && 
-            this.head.value.codigo === value.codigo) {
+        if (this.head.value.modelo === value.modelo && 
+            this.head.value.placa === value.placa && 
+            this.head.value.año === value.año) {
 
             this.head = this.head.next;
 
@@ -82,9 +55,9 @@ class LinkedList {
         while (
           current.next &&
           (
-            current.next.value.nombre !== value.nombre ||
-            current.next.value.edad !== value.edad ||
-            current.next.value.codigo !== value.codigo
+            current.next.value.modelo !== value.modelo ||
+            current.next.value.placa !== value.placa ||
+            current.next.value.año !== value.año
           )
         ) {
           current = current.next;

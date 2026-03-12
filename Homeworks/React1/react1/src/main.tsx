@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import VehiculosManage from './VehiculosManage';
-import InversionistasManage from './inversionistasManage';
+import LibrosManage from './LibrosManage';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <VehiculosManage />
-    <InversionistasManage />
+    <LibrosManage/>
   </React.StrictMode>
 )

@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import LibrosManage from './LibrosManage';
+import AdministrarUsuarios from './AdministrarUsuarios';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <LibrosManage/>
+    <AdministrarUsuarios/>
   </React.StrictMode>
 )

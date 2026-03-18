@@ -35,9 +35,9 @@ function LibrosManage() {
 
             lista.current.push(
                 {
-                    nombre: "Petro: Heroe O Villano",
+                    nombre: "Pantano de Amor",
                     isbn: "0003 00003 00003",
-                    autor: "Laura Campo",
+                    autor: "Arturo Calle",
                     editorial: "Norma"
                 }
             )

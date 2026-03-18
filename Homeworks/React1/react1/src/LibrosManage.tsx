@@ -1,11 +1,15 @@
 import {useState, useEffect, useRef} from "react";
 import Stack from "./Stacks.ts";
+import type { Libro } from "./Libro.ts";
+import AddLibro from "./AddLibro.tsx";
+import LibrosDisponibles from "./LibrosDisponibles.tsx";
 
 function LibrosManage() {
     
-    const [Libro, setLibro] = useState<any>(null);
+    const [libros, setLibros] = useState<any[]>([]);
     const lista = useRef(new Stack());
 
+    //Libros Iniciales
     useEffect(() =>{
 
         if(lista.current.size() === 0){
@@ -37,15 +41,33 @@ function LibrosManage() {
                     editorial: "Norma"
                 }
             )
-
+            setLibros([...lista.current.item]);
         }
 
     },[]);
 
+    const addLibro = (nombre:string, isbn:string, autor:string, editorial:string) => {
+        const newLibro: Libro = {
+            nombre,
+            isbn,
+            autor,
+            editorial      
+        };
+
+        lista.current.push(newLibro);
+        setLibros([...lista.current.item]);
+    }
+
+    const alquilarLibro = () => {
+        lista.current.pop();
+        setLibros([...lista.current.item]);
+    }
 
     return (
         <>
             <h1> Añade un Libro</h1>
+            <AddLibro onAdd={addLibro} />
+            <LibrosDisponibles libros={libros} alquilar={alquilarLibro}/>
         </>
     );
 

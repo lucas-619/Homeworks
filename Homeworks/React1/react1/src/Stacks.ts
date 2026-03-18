@@ -12,7 +12,7 @@ export default class Stack {
     }
 
     pop(){
-        return this.item.length > 0 ? this.item.pop : null;
+        return this.item.length > 0 ? this.item.pop() : null;
     }
 
     size(){

@@ -34,11 +34,12 @@ export default function AddUsuario({onAdd}: Props){
             />
             <input
                 placeholder="Monto"
+                type="Number"
                 onChange={e=>setMonto(e.target.valueAsNumber)} 
             />
             <input
-                placeholder="Año + Mes + Dia + Hora + Minuto"
-                onChange={e=>setTime(e.target.valueAsDate || new Date())}
+                type="datetime-local"
+                onChange={e => setTime(e.target.valueAsDate || new Date())}
             />
             
             <button type="submit">Agregar</button>

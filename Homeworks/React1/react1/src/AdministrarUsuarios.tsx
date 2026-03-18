@@ -42,14 +42,15 @@ export default function AdministrarUsuarios(){
 
     
     const addUsario = (nombre:string, monto:number, time:Date) => {
-        const newLibro: Usuario = {
+        const newUsuario: Usuario = {
             nombre,
             monto,
             time     
         };
 
-        lista.current.enqueue(newLibro);
+        lista.current.enqueue(newUsuario);
         setUsuario([...lista.current.item]);
+        console.log("DESPUÉS:", lista.current.item);
     }
    
     const atenderUsuario = () => {

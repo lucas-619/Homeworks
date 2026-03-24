@@ -1,4 +1,4 @@
-import {Usuario} from "./usuario"
+import {Usuario} from "./usuario.ts"
 
 export default class Queue{
 

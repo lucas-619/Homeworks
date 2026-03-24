@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { AuthContext } from "./MyContext";
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
-export default function PrivateRoute({ children }: any) {
+export default function PrivateRoute() {
   const { user } = useContext(AuthContext);
-
-  return user ? children : <Navigate to="/" />;
+  console.log("USER:", user);
+  return user ? <Outlet /> : <Navigate to="/" />;
 }

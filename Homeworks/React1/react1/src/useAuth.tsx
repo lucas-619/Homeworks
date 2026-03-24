@@ -12,7 +12,7 @@ export function useAuth() {
 
             setUser(JSON.parse(storedUser));
 
-         } }, []) 
+    } }, []) 
 
     const login = (userData: any) => { 
 

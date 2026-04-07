@@ -1,21 +1,20 @@
 import {Routes, Route} from "react-router-dom";
-import AdministrarUsuarios from './AdministrarUsuarios';
 import PrivateRoute from "./PrivateRoute";
-import Login from "./Login";
-import LibrosManage from "./LibrosManage";
+import Login from "./pages/Login";
+import Tasks from "./pages/Tasks";
+import Register from "./pages/Register";
+
 
 function App() {
   return (
     
     <Routes>
 
-      <Route path="/" element={<Login/>} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/register" element={<Register/>} />
 
       <Route element={<PrivateRoute/>}>
-
-        <Route path="/Challenge-05" element={<AdministrarUsuarios />} />
-        <Route path="/Challenge-04" element={<LibrosManage />} />
-        
+        <Route path="/tasks" element={<Tasks />} />
       </Route>
     </Routes>
 

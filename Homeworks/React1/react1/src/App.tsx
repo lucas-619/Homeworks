@@ -1,8 +1,8 @@
 import {Routes, Route} from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 import Login from "./pages/Login";
-import Tasks from "./pages/Tasks";
 import Register from "./pages/Register";
+import Files from "./pages/Tasks";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Route path="/register" element={<Register/>} />
 
       <Route element={<PrivateRoute/>}>
-        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/files" element={<Files />} />
       </Route>
     </Routes>
 

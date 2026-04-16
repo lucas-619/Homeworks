@@ -13,7 +13,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       await login(email, password);
-      navigate("/tasks");
+      navigate("/files");
     } catch (error: unknown) {
       if (error instanceof Error) {
         alert(error.message);

@@ -1,0 +1,129 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.recommendationContainer {
+  min-height: 300px;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 2rem;
+  color: $text-secondary;
+  
+  p {
+    margin: 0.5rem 0;
+  }
+  
+  .hint {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+}
+
+.selectedSong {
+  margin-bottom: 1.5rem;
+  
+  h3 {
+    font-size: 0.9rem;
+    color: $text-secondary;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.songCard {
+  background: linear-gradient(135deg, rgba(29, 185, 84, 0.1), rgba(29, 185, 84, 0.05));
+  padding: 1rem;
+  border-radius: $border-radius;
+  border-left: 3px solid $primary-color;
+  
+  strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  span {
+    display: block;
+    font-size: 0.9rem;
+    color: $text-secondary;
+    margin-bottom: 0.25rem;
+  }
+  
+  small {
+    font-size: 0.8rem;
+    color: $primary-color;
+  }
+}
+
+.recommendations {
+  h3 {
+    font-size: 0.9rem;
+    color: $text-secondary;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.relatedList {
+  list-style: none;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.relatedItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 0.5rem;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all $transition-speed;
+
+  &:hover {
+    background: rgba(29, 185, 84, 0.2);
+    transform: translateX(4px);
+    
+    .arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.relatedTitle {
+  font-weight: 500;
+  flex: 1;
+}
+
+.relatedArtist {
+  color: $text-secondary;
+  font-size: 0.85rem;
+  margin: 0 1rem;
+}
+
+.arrow {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all $transition-speed;
+  color: $primary-color;
+}
+
+.noRecommendations {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius;
+  color: $text-secondary;
+  font-size: 0.9rem;
+}
+
+.graphInfo {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius;
+  text-align: center;
+  font-size: 0.8rem;
+  color: $text-secondary;
+}

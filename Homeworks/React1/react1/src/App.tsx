@@ -1,24 +1,14 @@
-import {Routes, Route} from "react-router-dom";
-import PrivateRoute from "./PrivateRoute";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Files from "./pages/Tasks";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Spotify from "./components/Spotify";
 
 
 function App() {
-  return (
-    
-    <Routes>
-
-      <Route path="/login" element={<Login/>} />
-      <Route path="/register" element={<Register/>} />
-
-      <Route element={<PrivateRoute/>}>
-        <Route path="/files" element={<Files />} />
-      </Route>
-    </Routes>
-
-  )
+    return (
+        <Routes>
+            <Route path="/" element={<Spotify />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+    );
 }
 
-export default App
+export default App;

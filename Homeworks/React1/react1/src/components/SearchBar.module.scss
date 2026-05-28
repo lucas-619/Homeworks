@@ -1,0 +1,53 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.searchContainer {
+  margin-bottom: 1rem;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  font-size: 1.1rem;
+  color: $text-secondary;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: $text-light;
+  font-size: 1rem;
+  transition: all $transition-speed;
+
+  &:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px $primary-color;
+  }
+
+  &::placeholder {
+    color: $text-secondary;
+  }
+}
+
+.clearButton {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  color: $text-secondary;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  
+  &:hover {
+    color: $text-light;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}

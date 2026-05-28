@@ -1,0 +1,91 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.rankingContainer {
+  width: 100%;
+}
+
+.rankingHeader {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 100px 50px;
+  padding: 0.75rem;
+  background: rgba(29, 185, 84, 0.1);
+  border-radius: $border-radius;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: $primary-color;
+  font-size: 0.85rem;
+}
+
+.rankingList {
+  list-style: none;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.rankingItem {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 100px 50px;
+  align-items: center;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  margin-bottom: 0.25rem;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all $transition-speed;
+
+  &:hover {
+    background: rgba(29, 185, 84, 0.15);
+    transform: scale(1.01);
+    
+    .playButton {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.rank {
+  font-weight: bold;
+  color: $primary-color;
+  font-size: 1.1rem;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.artist {
+  color: $text-secondary;
+  font-size: 0.9rem;
+}
+
+.playCount {
+  text-align: right;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.playButton {
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all $transition-speed;
+  color: $primary-color;
+}
+
+.heapInfo {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius;
+  text-align: center;
+  font-size: 0.8rem;
+  color: $text-secondary;
+}
+
+.empty {
+  text-align: center;
+  padding: 2rem;
+  color: $text-secondary;
+}

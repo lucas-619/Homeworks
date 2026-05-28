@@ -1,0 +1,59 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.suggestionsContainer {
+  margin-top: 1rem;
+  
+  h3 {
+    font-size: 0.9rem;
+    color: $text-secondary;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.suggestionsList {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestionItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 0.5rem;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all $transition-speed;
+
+  &:hover {
+    background: rgba(29, 185, 84, 0.2);
+    transform: translateX(4px);
+    
+    .playIcon {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+.songTitle {
+  font-weight: 600;
+  flex: 1;
+}
+
+.songArtist {
+  color: $text-secondary;
+  font-size: 0.85rem;
+  margin: 0 1rem;
+}
+
+.playIcon {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all $transition-speed;
+  color: $primary-color;
+  font-size: 0.9rem;
+}

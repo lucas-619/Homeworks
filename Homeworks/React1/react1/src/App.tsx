@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import GraphApp from "./components/GraphApp";
+import SmartSearchEngine from "./components/SmartSearchEngine";
 
 function App() {
   return (
-    <GraphApp/>
+    <SmartSearchEngine />
   );
 }
 
